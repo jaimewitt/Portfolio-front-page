@@ -1,0 +1,208 @@
+
+body {
+    background-image: url("black-website-background.jpg"); center top;
+    background-size: cover;
+    margin: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial;
+
+    margin: auto;
+    width: 70%;
+    padding: 0px;
+
+}
+
+
+h1{
+  color: white;
+  font-size: 30px;
+}
+h2 {
+  color: white;
+  font-size: 20px;
+}
+p {
+  text-align: center;
+  font-size: 15px;
+
+}
+/* Header/logo Title */
+.header {
+    padding: 0px;
+    text-align: center;
+    width: 70%;
+    height: 100px;
+
+    background-color: crimson; opacity:0.4;
+
+
+}
+
+/* Increase the font size of the heading */
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 70%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+
+}
+.panel {
+
+    display: none;
+    width: 70%;
+    background-color: white;
+    overflow: hidden;
+    }
+.right {
+  background-color: crimson; opacity:0.4;
+  color: #444;
+  cursor: pointer;
+  padding: 18px  0px 18px 0px;
+  width: 70%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+}
+.footer {
+  padding: 0px;
+  text-align: center;
+  width: 70%;
+  background-color: oldlace; opacity:0.6;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}

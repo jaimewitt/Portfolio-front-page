@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Jaime Witt Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="header">
+  	<h1>Portfolio</h1>
+  	<h2>Jaime Witt</h2>
+	</div>
+	<div>
+
+		<button class="accordion">About Me</button>
+		<div class="panel">
+  		<p>I am a highly motivated web developer and digital editor with great time management skills, and plenty of experience in direct customer/client service.  I am seeking a position that allows me to hone my existing skillsets. I have been working in the field of nursing, however I am excited about transitioning back into the world of design, marketing, and business.</p>
+		</div>
+		<button class="accordion">Videos</button>
+		<div class="panel">
+  		<p>Here's a random YouTube Video... for now.</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/uEYsmzophTA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
+		<button class="accordion">Digital Edits</button>
+		<div class="panel">
+			<p>Here is a small group of photos I've edited. The landscapes I shot myself, the portraits were shot by a friend, but I did the retouches.</p>
+			<div class="container">
+			  <div class="mySlides">
+			    <div class="numbertext">1 / 6</div>
+			    <img src="image6.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">2 / 6</div>
+			    <img src="image1.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">3 / 6</div>
+			    <img src="image2.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">4 / 6</div>
+			    <img src="image3.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">5 / 6</div>
+			    <img src="image4.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">6 / 6</div>
+			    <img src="image5.jpg" style="width:100%">
+			  </div>
+
+			  <a class="prev" onclick="plusSlides(-1)">❮</a>
+			  <a class="next" onclick="plusSlides(1)">❯</a>
+
+			  <div class="caption-container">
+			    <p id="caption"></p>
+			  </div>
+
+			  <div class="row">
+			    <div class="column">
+			      <img class="demo cursor" src="image6.jpg" style="width:100%" onclick="currentSlide(1)" alt="Island Flower">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="image1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Island of Kea, Greece">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="image2.jpg" style="width:100%" onclick="currentSlide(3)" alt="Beach Classroom">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="image3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Church on a Hill">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="image4.jpg" style="width:100%" onclick="currentSlide(5)" alt="Bridesmaid/Groomsman">
+			    </div>
+			    <div class="column">
+			      <img class="demo cursor" src="image5.jpg" style="width:100%" onclick="currentSlide(6)" alt="Little Boy">
+			    </div>
+			  </div>
+			</div>
+
+			<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) {
+			  showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+			  showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+			  var i;
+			  var slides = document.getElementsByClassName("mySlides");
+			  var dots = document.getElementsByClassName("demo");
+			  var captionText = document.getElementById("caption");
+			  if (n > slides.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = slides.length}
+			  for (i = 0; i < slides.length; i++) {
+			      slides[i].style.display = "none";
+			  }
+			  for (i = 0; i < dots.length; i++) {
+			      dots[i].className = dots[i].className.replace(" active", "");
+			  }
+			  slides[slideIndex-1].style.display = "block";
+			  dots[slideIndex-1].className += " active";
+			  captionText.innerHTML = dots[slideIndex-1].alt;
+			}
+			</script>
+		</div>
+	</div>
+	<script>
+	var acc = document.getElementsByClassName("accordion");
+	var i;
+
+	for (i = 0; i < acc.length; i++) {
+	    acc[i].addEventListener("click", function() {
+	        this.classList.toggle("active");
+	        var panel = this.nextElementSibling;
+	        if (panel.style.display === "block") {
+	            panel.style.display = "none";
+	        } else {
+	            panel.style.display = "block";
+	        }
+	    });
+	}
+  </script>
+	<div class="right">
+  	<h2>Over the next few months I will be working on expanding the sections to include more links to new sites that I've designed and videos and photos that I've shot and edited. Come see me again!</h2>
+	</div>
+
+	<div class="footer">
+		<a href="https://www.facebook.com/jdholt.ou" class="fa fa-facebook"></a>
+		<a href="#" class="fa fa-twitter"></a>
+		<a href="#" class="fa fa-google"></a>
+		<a href="https://www.linkedin.com/in/jdholt" class="fa fa-linkedin"></a>
+	</div>
+</body>
+</html>
